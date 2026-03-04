@@ -194,7 +194,8 @@ Building decision-support dashboards instead of static reports
 
 👤 Author
 
-Kishore Murugappan
+✨ Kishore Murugappan
+
 Aspiring Data Analyst | Power BI | SQL | Python
 
 If you'd like, I can also:
@@ -205,4 +206,4 @@ If you'd like, I can also:
 
 📊 Make it more business-impact oriented
 
-✨ 
+
