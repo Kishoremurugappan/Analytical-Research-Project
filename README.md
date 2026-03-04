@@ -3,29 +3,52 @@
 Department Benchmarking, Ranking & Tenure Analytics using Power BI
 
 🔎 Project Objective
-1.Analyze department-wise employee performance
-2.Benchmark department ratings against overall company performance
-3.Rank departments using DAX-based ranking logic
-4.Evaluate employee tenure across departments
-5.Design an executive-ready interactive HR dashboard
+
+This project analyzes departmental performance and workforce tenure using advanced DAX logic and structured data modeling in Power BI.
+
+Key Objectives:
+
+Analyze department-wise employee performance
+
+Benchmark department ratings against overall company performance
+
+Rank departments using DAX-based ranking logic
+
+Evaluate employee tenure across departments
+
+Design an executive-ready interactive HR dashboard
 
 📌 Purpose of HR Analytics
-To enable leadership teams to track, compare, and improve departmental performance using structured data modeling and benchmark-driven analysis.
+
+To enable leadership teams to track, compare, and improve departmental performance through benchmark-driven analysis and structured data modeling.
 
 📈 Significance of Examining HR Reports
-1.Identify high-performing and underperforming departments
-2.Compare department performance against company benchmark
-3.Understand ranking hierarchy
-4.Analyze employee service span distribution
-5.Support data-driven HR strategy decisions
 
-🧠 What the Dashboard Does
-1.Compares Department Average Rating vs Company Average Rating
-2.Ranks departments dynamically using RANKX
-3.Calculates employee service span using DATEDIFF
-4.Uses CALCULATE + ALL to remove filter context for benchmarking
-5.Provides interactive slicer-based department analysis
-6.Displays KPI cards for quick executive interpretation
+Identify high-performing and underperforming departments
+
+Compare department ratings against company benchmarks
+
+Understand department ranking hierarchy
+
+Analyze employee tenure distribution
+
+Support data-driven HR decision-making
+
+🧠 Dashboard Capabilities
+
+The dashboard provides:
+
+Department Average Rating vs Company Average Rating comparison
+
+Dynamic department ranking using RANKX
+
+Employee service span calculation using DATEDIFF
+
+Benchmark logic using CALCULATE + ALL to remove filter context
+
+Interactive slicer-based department analysis
+
+Executive-level KPI cards for quick interpretation
 
 🏗 Data Model Architecture
 
@@ -65,105 +88,121 @@ Single Direction Filtering
 
 Corrected auto-detected relationship configuration
 
-
 🔬 Key DAX Measures
-
-Company Average Rating:
-*Company Average Rating =
+Company Average Rating
+Company Average Rating =
 CALCULATE(
     AVERAGE(EmployeeData[PerformanceRating]),
     ALL(EmployeeData)
-)*
-
-Department Wise Rating:
-*Department Wise Rating =
-AVERAGE(EmployeeData[PerformanceRating])*
-
-Department Rank:
-*Department Rank =
+)
+Department Wise Rating
+Department Wise Rating =
+AVERAGE(EmployeeData[PerformanceRating])
+Department Rank
+Department Rank =
 RANKX(
     ALL('Department Desc'[Department]),
     [Department Wise Rating],
     ,
     DESC,
     DENSE
-)*
-
-Service Span (Calculated Column):
-*Service Span(Emp) =
+)
+Service Span (Calculated Column)
+Service Span(Emp) =
 DATEDIFF(
     EmployeeData[StartDate],
     EmployeeData[Updated End Date],
     YEAR
-)*
-
+)
 📈 Key Insights
 
-1.Sales and IT departments perform above company benchmark.
-2.Finance department shows below-average performance, indicating improvement scope.
-3.Higher tenure departments demonstrate more stable rating patterns.
-4.Ranking logic highlights competitive hierarchy across business units.
+Sales and IT departments perform above company benchmark
+
+Finance department shows below-average performance
+
+Higher-tenure departments demonstrate stable rating patterns
+
+Ranking logic highlights competitive hierarchy across business units
 
 🚧 Challenges Faced
 
-1.Auto-detected relationship initially created incorrect filter behavior.
-2.Needed to correct cardinality to enforce proper star schema structure.
-3.Managed filter context using CALCULATE and ALL.
-4.Resolved slicer filtering issue by standardizing dimension usage.
-5.Avoided many-to-many modeling complications.
+Auto-detected relationships initially caused incorrect filter behavior
+
+Corrected cardinality to maintain proper star schema structure
+
+Managed filter context using CALCULATE and ALL
+
+Resolved slicer filtering inconsistencies
+
+Avoided many-to-many modeling complications
 
 ▶ How to Use
 
->Download the .pbix file
->Open in Power BI Desktop
->Use Department slicer to explore performance
->Analyze ranking, benchmark comparison, and tenure metrics
+Download the .pbix file
+
+Open in Power BI Desktop
+
+Use the Department slicer to explore performance
+
+Analyze ranking, benchmark comparison, and tenure metrics
 
 🛠 Technical Skills Demonstrated
 
-1.**Star Schema Data Modeling**
+Star Schema Data Modeling
 
-2.Relationship Cardinality Management
+Relationship & Cardinality Management
 
-3.Filter Context Handling
+Filter Context Handling
 
-4.DAX:
+Advanced DAX:
 
->CALCULATE
+CALCULATE
 
->ALL
+ALL
 
->RANKX
+RANKX
 
->SWITCH
+SWITCH
 
->SELECTEDVALUE
+SELECTEDVALUE
 
->DATEDIFF
+DATEDIFF
 
->KPI Design
+KPI & Benchmark Logic Design
 
->Benchmark Comparison Logic
-
->Dashboard UI Structuring
-
+Executive Dashboard UI Structuring
 
 💼 Business Interpretation Skills
 
-1.Translating performance data into actionable insights
-2.Benchmark-based performance evaluation
-3.Identifying improvement opportunities
-4.Designing executive-level dashboards
+Translating HR performance data into actionable insights
+
+Benchmark-based evaluation
+
+Identifying improvement opportunities
+
+Designing executive-level dashboards
 
 🚀 Key Learning Outcomes
 
-1.Importance of correct relationship configuration
-2.Avoiding many-to-many modeling issues
-3.Controlling filter propagation
-4.Building decision-support dashboards instead of static reports
+Importance of correct relationship configuration
 
+Avoiding many-to-many modeling issues
+
+Controlling filter propagation
+
+Building decision-support dashboards instead of static reports
 
 👤 Author
 
-Shubhayan Kundu
+Kishore Murugappan
 Aspiring Data Analyst | Power BI | SQL | Python
+
+If you'd like, I can also:
+
+🔥 Make it more recruiter-focused
+
+🎯 Make it more technical (for hiring managers)
+
+📊 Make it more business-impact oriented
+
+✨ 
